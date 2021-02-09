@@ -13,7 +13,7 @@ function App() {
     <Router>
       
       <Route path='/' component={Home} />
-      <Route path='/spring' component={Spring} />
+      <Route path='/spring' component={Spring}  />
 
     </Router>
   );

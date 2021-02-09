@@ -15,7 +15,7 @@ export default class index extends Component {
         let right = `春来江水绿如蓝`
         return (
             <div className={css.div}>
-            
+                <canvas id='sky' ></canvas>
                 <h1 className={css.hengpi}>{hengpi}</h1>
                 <h1 className={css.left}>{left}</h1>
                 <h1 className={css.right}>{right}</h1>
@@ -28,7 +28,7 @@ export default class index extends Component {
                 {/* <img className = {css.fu} src={fu} width ='230' height='230'/>
                 <img className = {css.quan} src={quan} width ='500' height='500'/> */}
                 <img className = {css.fu} src={tu} ></img>
-                <canvas id='sky' ></canvas>
+                
             </div>
         )
     }
