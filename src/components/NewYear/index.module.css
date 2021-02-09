@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+*, *:after, *:before{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  transition: all 100ms ease-in;
+}
+.new_year{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 200px 100px 0px 0px;
+  }
+  .new_year>span{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 175px;
+    font-weight: 700;
+    color: #7a8fe8;
+  }
+  span.eight{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-right: -200px;
+    -webkit-animation: out_2018 5s ease-in-out 5s forwards;
+            animation: out_2018 5s ease-in-out 5s forwards;
+  }
+  span.nine{
+    position: absolute;
+    right: 0%;
+    margin-right: -200px;
+    -webkit-animation: in_2019 6s ease-in-out forwards;
+            animation: in_2019 6s ease-in-out forwards;
+  }
+  span.nine:before{
+    content: '';
+    width: 0px;
+    height: 6px;
+    display: block;
+    border-radius: 3px;
+    background: #7a8fe8;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    position: absolute;
+    top: 55px;
+    left: 10px;
+    z-index: -1;
+    -webkit-animation: entry_balloon 1s ease-in-out 4s;
+            animation: entry_balloon 1s ease-in-out 4s;
+  }
+  .balloon{
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: #ffd500;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -165px;
+    right: 0%;
+    margin-right: -200px;
+    -webkit-animation: in_and_out_balloon 10s ease-in-out forwards;
+            animation: in_and_out_balloon 10s ease-in-out forwards;
+  }
+  .balloon:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #f3e309 transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -10px;
+    z-index: -1;
+  }
+  .balloon:after{
+    content: '';
+    width: 4px;
+    height: 100px;
+    display: block;
+    background: #fff;
+    border-radius: 0px 0px 3px 3px;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: -110px;
+  }
+
+  @-webkit-keyframes in_2019 {
+    0% {
+      right: 0%;
+    }
+    66.6666% {
+      right: 50%;
+      margin-right: -300px;
+    }
+    90% {
+      right: 50%;
+      margin-right: -300px;
+    }
+    100% {
+      right: 50%;
+    }
+  }
+  
+  @keyframes in_2019 {
+    0% {
+      right: 0%;
+    }
+    66.6666% {
+      right: 50%;
+      margin-right: -300px;
+    }
+    90% {
+      right: 50%;
+      margin-right: -300px;
+    }
+    100% {
+      right: 50%;
+    }
+  }
+  @-webkit-keyframes in_and_out_balloon {
+    0% {
+      right: 0%;
+    }
+    40% {
+      right: 50%;
+      margin-right: -300px;
+    }
+    50% {
+      right: 50%;
+      margin-right: -200px;
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+      right: 50%;
+    }
+  }
+  @keyframes in_and_out_balloon {
+    0% {
+      right: 0%;
+    }
+    40% {
+      right: 50%;
+      margin-right: -300px;
+    }
+    50% {
+      right: 50%;
+      margin-right: -200px;
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+      right: 50%;
+    }
+  }
+  @-webkit-keyframes entry_balloon {
+    0% {
+      -webkit-transform: rotate(-30deg);
+              transform: rotate(-30deg);
+      width: 40px;
+    }
+    100% {
+      -webkit-transform: rotate(-150deg);
+              transform: rotate(-150deg);
+      width: 70px;
+    }
+  }
+  @keyframes entry_balloon {
+    0% {
+      -webkit-transform: rotate(-30deg);
+              transform: rotate(-30deg);
+      width: 40px;
+    }
+    100% {
+      -webkit-transform: rotate(-150deg);
+              transform: rotate(-150deg);
+      width: 70px;
+    }
+  }
+  @-webkit-keyframes out_2018 {
+    0% {
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+    }
+  }
+  @keyframes out_2018 {
+    0% {
+      top: 50%;
+    }
+    100% {
+      top: -100%;
+    }
+  }

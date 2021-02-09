@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+*, *:after, *:before{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    transition: all 100ms ease-in;
+  }
+.fireworks{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .fireworks>div{
+    border: 2px solid #fff;
+    position: absolute;
+    opacity: 0;
+    -webkit-animation: drop_fireworks 1.5s ease-in-out 8s forwards;
+            animation: drop_fireworks 1.5s ease-in-out 8s forwards;
+  }
+  .fireworks>div.f1{
+    left: 10%;
+    top: 30%;
+  }
+  .fireworks>div.f2{
+    left: 15%;
+    top: 70%;
+  }
+  .fireworks>div.f3{
+    right: 10%;
+    top: 30%;
+  }
+  .fireworks>div.f4{
+    right: 15%;
+    top: 70%;
+  }
+  .fireworks>div span{
+    width: 6px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-animation: burst_fireworks 0.5s ease-in-out 9s forwards;
+            animation: burst_fireworks 0.5s ease-in-out 9s forwards;
+  }
+  .fireworks>div span:nth-child(1){
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .fireworks>div span:nth-child(2){
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  .fireworks>div span:nth-child(3){
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  .fireworks>div span:before{
+    content: '';
+    width: 2px;
+    height: 50px;
+    display: block;
+    background: #f5cc06;
+    position: absolute;
+    top: -60px;
+    left: 2px;
+  }
+  .fireworks>div span:after{
+    content: '';
+    width: 2px;
+    height: 50px;
+    display: block;
+    background: #f5cc06;
+    position: absolute;
+    bottom: -60px;
+    left: 2px;
+  }
+  .fireworks>div span i:before{
+    content: '';
+    width: 3px;
+    height: 3px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+  }
+  .fireworks>div span i:after{
+    content: '';
+    width: 3px;
+    height: 3px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+  }
+
+
+
+  @-webkit-keyframes drop_fireworks {
+    0% {
+      margin-top: 100%;
+      opacity: 0;
+      width: 2px;
+      height: 30px;
+      display: block;
+      border-radius: 50%;
+    }
+    75% {
+      margin-top: 0%;
+      opacity: 1;
+      width: 2px;
+      height: 30px;
+      display: block;
+      border-radius: 50%;
+    }
+    80%{
+      margin-top: 0px;
+      margin-left: 0px;
+      opacity: 1;
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      -webkit-transform: scale(0.2);
+              transform: scale(0.2);
+    }
+    100%{
+      opacity: 1;
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes drop_fireworks {
+    0% {
+      margin-top: 100%;
+      opacity: 0;
+      width: 2px;
+      height: 30px;
+      display: block;
+      border-radius: 50%;
+    }
+    75% {
+      margin-top: 0%;
+      opacity: 1;
+      width: 2px;
+      height: 30px;
+      display: block;
+      border-radius: 50%;
+    }
+    80%{
+      margin-top: 0px;
+      margin-left: 0px;
+      opacity: 1;
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      -webkit-transform: scale(0.2);
+              transform: scale(0.2);
+    }
+    100%{
+      opacity: 1;
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @-webkit-keyframes burst_fireworks {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes burst_fireworks {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
