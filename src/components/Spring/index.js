@@ -5,8 +5,7 @@ import shu from './shu.png'
 import bj from './bg.jpg'
 import f1 from './f1.png'
 import f2 from './f2.png'
-import fu from './fu.png'
-import quan from './quan.png'
+
 import tu from './300.jpg'
 import {Link,withRouter} from 'react-router-dom'
  class index extends Component {

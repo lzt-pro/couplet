@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import css from './index.module.css'
-import couplet from './chun.jpg'
+import couplet from './fu.png'
 import {Link,withRouter} from 'react-router-dom'
 class index extends Component {
     handleClick = ()=>{
@@ -12,11 +12,7 @@ class index extends Component {
             <div className = "nav">
             <button onClick={this.handleClick}>
             <img className = {css.couplet} src = {couplet} height="100" width="100" />
-            </button>
-            
-            
-            
-                
+            </button> 
             </div>
         )
     }
