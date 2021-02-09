@@ -12,7 +12,7 @@ function App() {
     
     <Router>
       
-      <Route path='/home' component={Home} />
+      <Route path='/' component={Home} />
       <Route path='/spring' component={Spring} />
 
     </Router>
