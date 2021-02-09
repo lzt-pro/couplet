@@ -8,7 +8,11 @@ import f2 from './f2.png'
 import fu from './fu.png'
 import quan from './quan.png'
 import tu from './300.jpg'
-export default class index extends Component {
+import {Link,withRouter} from 'react-router-dom'
+ class index extends Component {
+    handleClick = ()=>{
+        this.props.history.replace('/')
+    }
     render() {
         let hengpi = `金牛送福`
         let left = `日出江花红胜火`
@@ -23,7 +27,8 @@ export default class index extends Component {
                 <img className = {css.heng} src={heng} /><br/>
                 <img className = {css.shuLeft} src={shu} />
                 <img className = {css.shuRight} src={shu} />
-                <img className = {css.zIndex} src={f1} />
+                <button onClick={this.handleClick}>
+                <img className = {css.zIndex} src={f1} /></button>
                 <img className = {css.zIndex2} src={f2} />
                 {/* <img className = {css.fu} src={fu} width ='230' height='230'/>
                 <img className = {css.quan} src={quan} width ='500' height='500'/> */}
@@ -33,3 +38,4 @@ export default class index extends Component {
         )
     }
 }
+export default withRouter(index)
