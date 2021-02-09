@@ -4,7 +4,7 @@ import couplet from './chun.jpg'
 import {Link,withRouter} from 'react-router-dom'
 class index extends Component {
     handleClick = ()=>{
-        this.props.history.replace('/spring')
+        this.props.history.replace('/couplet/spring')
         // console.log('@')
     }
     render() {
